@@ -2,6 +2,6 @@ body {
     background: pink;
 
     @media (min-width: 30em) {
-        background: yellow;
+        background: rgb(255, 255, 255);
     }
 }
