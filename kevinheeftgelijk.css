@@ -1,7 +1,99 @@
+/* Algemene stijl */
 body {
-    background: pink;
+  font-family: "Inter", Arial, sans-serif;
+  background: #f6f7fb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
 
-    @media (min-width: 30em) {
-        background: rgb(255, 255, 255);
+/* Titel */
+header {
+  text-align: center;
+  background: linear-gradient(135deg, #5b7fff, #2e69d9);
+  color: white;
+  padding: 2rem 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* Journal layout */
+.journal {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+    @media (min-width: 1020px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 18fr;
     }
+}
+
+
+
+.entry {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    
+}
+
+.entry:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Titels */
+.entry h2 {
+  color: #2e69d9;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.entry p {
+  margin: 0.5rem 0;
+  text-align: justify;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 60ch;
+}
+
+
+a {
+  color: #2e69d9;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+  .entry {
+    padding: 1rem 1.2rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .entry h2 {
+    font-size: 1.1rem;
+  }
 }
