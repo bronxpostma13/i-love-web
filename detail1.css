@@ -1,0 +1,137 @@
+
+@font-face {
+  font-family:pixelHeading;
+  src: url(GothicByte.ttf);
+}
+
+@font-face {
+  font-family:pixelParagraaf;
+  src: url(BlockBlueprint.ttf);
+}
+
+
+:root{
+/* Kleuren */
+    --white-color: hsl(0 0% 99%);
+    --black-color: hsl(0 1% 21%);
+
+     /* Typographie */
+    --font-weight-standard: 400;
+    --font-weight-heading: 800;
+    --font-family-h: pixelHeading, Arial;
+    --font-family-p: pixelParagraaf, Arialnp;
+
+    --font-size-clamp-p: clamp(1.5rem, 2.5vw, 4rem);
+    --font-size-h: 4rem;
+    --font-size-clamp-p-media: clamp( 2.2 rem, 8vw, 2.9rem);
+    --font-size-clamp-H-media: clamp(4rem, 10vw, 7rem);
+    --font-size-clamp-a: clamp(1.5rem, 2.5vw, 4rem);
+    --font-size-clamp-a-media: clamp( 2.2 rem, 8vw, 2.9rem);
+
+
+}
+
+/* =============== BASIS (mobile first) =============== */
+body {
+  background: url(3dcjfz5xxyw21.png) center/cover no-repeat;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* container vult hele scherm */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.progress-link {
+  font-family: var(--font-family-p);
+  max-width:50%;
+  font-size: clamp(2rem, 2.5vw, 4rem);
+  color: var(--white-color);
+  text-decoration: none;
+  transition: 0.2s;
+  margin-top: 4px;
+  @media (min-width: 768px) {
+    font-size: clamp( 2.2 rem, 8vw, 2.9rem);
+}
+}
+
+/* scale animatie alleen op tablet en hoger + underline voor mobiele view op de hover state  */
+.progress-link:hover {
+  text-decoration: underline;
+  @media (min-width: 768px) {
+    transform: scale(1.2);
+    text-decoration: none;
+  }
+}
+
+/* ---------- tekst responsive met clamp() ---------- */
+
+#quest{
+  font-family: var(--font-family-p);
+  font-weight: var(--font-weight-heading);
+  color: var(--white-color);
+}
+label{
+  font-family: var(--font-family-p);
+  color: var(--white-color);
+}
+
+.card-front {
+	background-color: transparent;
+  max-width:80%;
+	width: 22em;
+	height: 22em;
+  background-color:#695DD880;
+  border-style:solid;
+  border-color:#c9b63e;
+	text-align: center;
+  justify-self:center;
+}
+
+.outer{
+  display:grid;
+  justify-content: center;
+  gap:3em;
+   @media (min-width: 768px) {
+     display:flex;
+  justify-content: center;
+  gap:3em;
+/*  transform: scale(0.6); */
+}
+}
+/* ========= Progress bar  ======= */
+
+ul{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  justify-self:center;
+  align-items:center;
+  
+ 
+  
+  
+}
+
+ul li{
+ list-style:none;
+  
+} 
+
+a{
+  text-decoration: none;
+  color: white;
+  font-family: var(--font-family-p);
+}
+
+li:hover {
+    transform: scale(1.2);
+    text-decoration: none;
+  }

@@ -1,0 +1,142 @@
+@font-face {
+  font-family:pixelHeading;
+  src: url(GothicByte.ttf);
+}
+
+@font-face {
+  font-family:pixelParagraaf;
+  src: url(BlockBlueprint.ttf);
+}
+
+:root{
+/* Kleuren */
+    --white-color: hsl(0 0% 99%);
+    --black-color: hsl(0 1% 21%);
+
+     /* Typographie */
+    --font-weight-standard: 400;
+    --font-weight-heading: 800;
+    --font-family-h: pixelHeading, Arial;
+    --font-family-p: pixelParagraaf;
+
+    --font-size-clamp-p: clamp(1.5rem, 2.5vw, 4rem);
+    --font-size-h: 4rem;
+    --font-size-clamp-p-media: clamp( 2.2 rem, 8vw, 2.9rem);
+    --font-size-clamp-H-media: clamp(4rem, 10vw, 7rem);
+    --font-size-clamp-a: clamp(1.5rem, 2.5vw, 4rem);
+    --font-size-clamp-a-media: clamp( 2.2 rem, 8vw, 2.9rem);
+
+
+}
+
+/* =============== BASIS (mobile first) =============== */
+body {
+  background: url(wp3309021.jpg) center/cover no-repeat;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* container vult hele scherm */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+/* ---------- tekst responsive met clamp() ---------- */
+ .back-btn{
+   position: fixed;
+  right: 1.5rem;
+  top: 2%;
+  text-decoration: none;
+ p{
+  font-family: pixelParagraaf;
+  /* max-width:50%; */
+  font-size: 4em;
+  color:var(--white-color);
+
+  text-decoration: none;
+  font-weight: var(--font-weight-standard);
+   transition: 0.2s;
+}
+}
+.back-btn:hover{
+  transform: scale(1.2);
+    text-decoration: none;
+}
+
+  h1 {
+  font-family: var(--font-family-h);
+  font-size: var(--font-size-h);
+  font-weight: var(--font-weight-heading);
+  max-width: 95%;
+  color: var(--white-color);
+  -webkit-text-stroke: 1px var(--black-color);
+
+  @media (min-width: 768px) {
+    font-size: var(--font-size-clamp-H-media);
+    transform: translate(0 0 0 0);
+  }
+}
+
+
+ 
+ /* text decoratie en groote  */
+.progress-link {
+  font-family: pixelParagraaf;
+  max-width:50%;
+  font-size: clamp(1.5rem, 2.5vw, 4rem);
+  color: var(--white-color);
+  text-decoration: none;
+  transition: 0.2s;
+  @media (min-width: 768px) {
+    font-size: clamp( 2.2 rem, 8vw, 2.9rem);
+}
+}
+/* scale animatie alleen op tablet en hoger + underline voor mobiele view op de hover state  */
+.progress-link:hover {
+  text-decoration: underline;
+  @media (min-width: 768px) {
+    transform: scale(1.2);
+    text-decoration: none;
+  }
+}
+
+/* =============== SVG PIJL LINKS MIDDEN =============== */
+ /* plaats van de button  */
+.forward-btn {
+  position: fixed;
+  left: 1.5rem;
+  top: 7.2%;
+
+  @media (min-width: 768px) {
+    top: 50%;
+    left: 1.5rem;
+  }
+
+}
+ /* foto goede maat + transition voor scale  */
+.forward-btn img {
+  width: 5em;
+  height: 5em;
+  fill: none;
+  cursor: pointer;
+  transition: 0.2s;
+  @media (min-width: 768px) {
+    width:6em;
+    height: 6em;
+  }
+}
+    /* Maakt button groter */
+.forward-btn img:hover {
+  transform: scale(1.2);
+}
+
+
+
+
+
